@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_congratulatory_config" model="ir.ui.view">
+        <field name="name">pos_congratulatory_config</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='other_devices']" position="after">
+                <setting id="other_devices" string="Congratulatory Text" help="Add a congratulatory text to the bottom of the receipt">
+                    <field name="congratulatory_text" />
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
